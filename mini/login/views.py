@@ -9,4 +9,3 @@ def index_dlg(request):
 def login_dlg(request):
     context = {}
     return render(request, 'pages/login.html', context)
-    

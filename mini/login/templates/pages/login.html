@@ -35,6 +35,7 @@
 </head>
 
 <body>
+
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
@@ -44,30 +45,20 @@
                     </div>
                     <div class="panel-body">
                         <form role="form">
-                            <script>
-                                function go(loc){
-                                    console.log(loc);
-                                    document.getElementById('iframe').src = loc;
-                                }
-                            </script>
-                            <div class="iframe_container">
-                                <form>
-                                    <input type="radio" name="iframe" value="type" onClick = "go('login_patient.html')"/>Patient
-                                    <input type="radio" name="iframe" value="type" onClick = "go('login_hospital.html')"/>Hospital
-                                </form>
-                            </div>
-                            <div class="login_container">
-                                <iframe id="iframe" src="" width="100%" height="100%"></iframe>
-
-                            </div>
-                            <!-- <div>
-                                    <span><a href="login_patient" target="if_a">환자</a></span>
-                                    <span><a href="login_hospital" target="if_b">의료기관</a></span>
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
                                 </div>
-                                <div style="height: 205px;">
-                                    <iframe src="login_patient.html" width="200" height="200" name="if_a" frameborder="0" ></iframe>
-                                    <iframe src="login_hospital.html" width="200" height="200" name="if_b" frameborder="0" ></iframe>
-                                </div> -->
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                    </label>
+                                </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
                             </fieldset>
                         </form>
                     </div>
