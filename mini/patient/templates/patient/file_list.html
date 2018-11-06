@@ -4,6 +4,7 @@
     <thead>
         <tr>
             <th scope="col">ID</th>
+            <th scope="col">PID</th>
             <th scope="col">파일명</th>
             <th scope="col">파일</th>
             <th scope="col"></th>
@@ -12,11 +13,12 @@
 <tbody>
     {% for file in files %}
     <tr>
-        <th scope="row">{{ file.pid }}</th>
+        <th scope="row">{{ file.id }}</th>
+            <td>{{ file.pid }}</td>
             <td>{{ file.name }}</td>
             <td>{{ file.description }}</td>
             <td>
-                <a href="{% url 'patient:file_download' file_id=file.pid %}" class="btn btn-outline-primary btn-sm">다운로드</a>
+                <a href="{% url 'patient:file_download' %}" class="btn btn-outline-primary btn-sm">다운로드</a>
             </td>
         </tr>
     {% endfor %}
