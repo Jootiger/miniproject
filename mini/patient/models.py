@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 class Info(models.Model):
     name = models.CharField('NAME', max_length=50)
-    pid = models.IntegerField('Patient ID', unique=True, blank=True, null=True)
+    pid = models.IntegerField('Patient ID', blank=True, null=True)
     description = models.CharField('DESCRIPTION', max_length=100, blank=True, null=True)
     content = models.TextField('CONTENT')
     createDate = models.DateTimeField('Create Date', auto_now_add=True)
