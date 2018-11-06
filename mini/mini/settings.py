@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'hospital.apps.HospitalConfig',
     'patient.apps.PatientConfig',
+    'bootstrap4', 
 )
 
 MIDDLEWARE_CLASSES = (
@@ -102,3 +103,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFIELS_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
